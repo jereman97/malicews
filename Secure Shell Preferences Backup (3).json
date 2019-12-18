@@ -1,0 +1,1 @@
+{"magic":"nassh-prefs","version":1,"nassh":{"profile-ids":[]},"hterm":{"css.js":{"audible-bell-sound":"lib-resource:hterm/audio/bell/bellsound/temp/set","desktop-notification-bell":true,"background-image":"1225%130XX","background-size":"1280::1230"},"default":{"environment":{"COLORTERM":"truecolor","NCURSES_NO_UTF8_ACS":"1","XCODE":"xterm-255color"}}}}
