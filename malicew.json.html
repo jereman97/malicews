@@ -1,0 +1,1420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #1b1f22; -webkit-text-stroke: #1b1f22}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #15171a; color: rgba(21, 23, 26, 0.3); -webkit-text-stroke: rgba(21, 23, 26, 0.3); min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #06214f; -webkit-text-stroke: #06214f}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #1b1f22; -webkit-text-stroke: #1b1f22; background-color: #ffffff}
+    span.s1 {font-kerning: none; background-color: #ffffff}
+    span.s2 {font-kerning: none}
+    span.s3 {font-kerning: none; color: #1b1f22; background-color: #ffffff; -webkit-text-stroke: 0px #1b1f22}
+    span.s4 {font-kerning: none; color: #0744b8; background-color: #ffffff; -webkit-text-stroke: 0px #0744b8}
+    span.s5 {font-kerning: none; color: #06214f; background-color: #ffffff; -webkit-text-stroke: 0px #06214f}
+    span.Apple-tab-span {white-space:pre}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 1175.9px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 50.0px; min-width: 50.0px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" class="td1">
+        <p class="p1"><span class="s1">{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span></span><span class="s1">"private"</span><span class="s3">: </span><span class="s4">true</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span></span><span class="s1">"scripts"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"lint"</span><span class="s3">: </span><span class="s1">"run-p --silent lint:*"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"lint:js"</span><span class="s3">: </span><span class="s1">"xo"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"lint:css"</span><span class="s3">: </span><span class="s1">"stylelint source/**/*.css"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"lint-fix"</span><span class="s3">: </span><span class="s1">"run-p --silent 'lint:* -- --fix'"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"test"</span><span class="s3">: </span><span class="s1">"run-p --silent test:js lint:* build"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"test:js"</span><span class="s3">: </span><span class="s1">"ava"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"build"</span><span class="s3">: </span><span class="s1">"webpack --mode=production"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"watch"</span><span class="s3">: </span><span class="s1">"webpack --mode=development --watch"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"watch:firefox"</span><span class="s3">: </span><span class="s1">"web-ext run --source-dir=distribution"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"prerelease:version"</span><span class="s3">: </span><span class="s1">"dot-json distribution/manifest.json version $VER"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"prerelease:source-url"</span><span class="s3">: </span><span class="s1">"echo https://github.com/sindresorhus/refined-github/archive/\"${TRAVIS_COMMIT:-$VER}\".zip &gt; distribution/SOURCE_URL"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"release:amo"</span><span class="s3">: </span><span class="s1">"cd distribution &amp;&amp; web-ext-submit"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"release:cws"</span><span class="s3">: </span><span class="s1">"cd distribution &amp;&amp; webstore upload --auto-publish"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"release"</span><span class="s3">: </span><span class="s1">"VER=$(daily-version) npm-run-all build prerelease:* create-git-tag release:*"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"create-git-tag"</span><span class="s3">: </span><span class="s1">"git tag $VER -m $VER &amp;&amp; git push origin $VER"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span></span><span class="s1">"dependencies"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@primer/octicons"</span><span class="s3">: </span><span class="s1">"^9.3.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"blur-accessibly"</span><span class="s3">: </span><span class="s1">"^0.9.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"content-scripts-register-polyfill"</span><span class="s3">: </span><span class="s1">"^1.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"copy-text-to-clipboard"</span><span class="s3">: </span><span class="s1">"^2.1.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"debounce-fn"</span><span class="s3">: </span><span class="s1">"^3.0.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"delay"</span><span class="s3">: </span><span class="s1">"^4.3.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"delegate-it"</span><span class="s3">: </span><span class="s1">"^1.1.0-7"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"dom-chef"</span><span class="s3">: </span><span class="s1">"^3.6.3"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"dom-loaded"</span><span class="s3">: </span><span class="s1">"^2.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"doma"</span><span class="s3">: </span><span class="s1">"^1.0.3"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"element-ready"</span><span class="s3">: </span><span class="s1">"^4.1.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"fit-textarea"</span><span class="s3">: </span><span class="s1">"^1.1.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"github-reserved-names"</span><span class="s3">: </span><span class="s1">"^1.1.7"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"image-promise"</span><span class="s3">: </span><span class="s1">"^7.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"indent-textarea"</span><span class="s3">: </span><span class="s1">"^2.0.0-1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"insert-text-textarea"</span><span class="s3">: </span><span class="s1">"^2.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"intervalometer"</span><span class="s3">: </span><span class="s1">"^1.0.5"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"linkify-issues"</span><span class="s3">: </span><span class="s1">"2.0.0-nolookbehind"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"linkify-urls"</span><span class="s3">: </span><span class="s1">"3.1.0-nolookbehind"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"mem"</span><span class="s3">: </span><span class="s1">"^6.0.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"onetime"</span><span class="s3">: </span><span class="s1">"^5.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"p-filter"</span><span class="s3">: </span><span class="s1">"^2.1.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"select-dom"</span><span class="s3">: </span><span class="s1">"^6.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"shorten-repo-url"</span><span class="s3">: </span><span class="s1">"^1.5.3"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"tiny-version-compare"</span><span class="s3">: </span><span class="s1">"^1.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"twas"</span><span class="s3">: </span><span class="s1">"^2.1.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webext-additional-permissions"</span><span class="s3">: </span><span class="s1">"^0.1.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webext-detect-page"</span><span class="s3">: </span><span class="s1">"^1.0.3"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webext-domain-permission-toggle"</span><span class="s3">: </span><span class="s1">"^1.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webext-dynamic-content-scripts"</span><span class="s3">: </span><span class="s1">"^6.0.3"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webext-options-sync"</span><span class="s3">: </span><span class="s1">"^1.2.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webext-permissions-events-polyfill"</span><span class="s3">: </span><span class="s1">"^1.0.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webext-storage-cache"</span><span class="s3">: </span><span class="s1">"^2.0.0-1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webextension-polyfill"</span><span class="s3">: </span><span class="s1">"^0.5.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"zip-text-nodes"</span><span class="s3">: </span><span class="s1">"^1.0.0-0"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span></span><span class="s1">"devDependencies"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@sindresorhus/tsconfig"</span><span class="s3">: </span><span class="s1">"^0.6.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/chrome"</span><span class="s3">: </span><span class="s1">"0.0.91"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/codemirror"</span><span class="s3">: </span><span class="s1">"0.0.81"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/copy-webpack-plugin"</span><span class="s3">: </span><span class="s1">"^5.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/firefox-webext-browser"</span><span class="s3">: </span><span class="s1">"^70.0.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/jsdom"</span><span class="s3">: </span><span class="s1">"^12.2.4"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/mini-css-extract-plugin"</span><span class="s3">: </span><span class="s1">"^0.8.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/react"</span><span class="s3">: </span><span class="s1">"^16.9.16"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@types/terser-webpack-plugin"</span><span class="s3">: </span><span class="s1">"^2.2.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@typescript-eslint/eslint-plugin"</span><span class="s3">: </span><span class="s1">"^2.11.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@typescript-eslint/parser"</span><span class="s3">: </span><span class="s1">"^2.11.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"ava"</span><span class="s3">: </span><span class="s1">"^2.4.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"buble"</span><span class="s3">: </span><span class="s1">"^0.19.8"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"buble-loader"</span><span class="s3">: </span><span class="s1">"^0.5.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"chrome-webstore-upload-cli"</span><span class="s3">: </span><span class="s1">"^1.2.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"copy-webpack-plugin"</span><span class="s3">: </span><span class="s1">"^5.1.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"css-loader"</span><span class="s3">: </span><span class="s1">"^3.3.2"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"daily-version"</span><span class="s3">: </span><span class="s1">"^0.12.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"dot-json"</span><span class="s3">: </span><span class="s1">"^1.0.4"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"eslint"</span><span class="s3">: </span><span class="s1">"^6.7.2"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"eslint-config-xo-typescript"</span><span class="s3">: </span><span class="s1">"^0.23.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"esm"</span><span class="s3">: </span><span class="s1">"^3.2.25"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"fork-ts-checker-webpack-plugin"</span><span class="s3">: </span><span class="s1">"^3.1.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"jsdom"</span><span class="s3">: </span><span class="s1">"^15.2.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"mini-css-extract-plugin"</span><span class="s3">: </span><span class="s1">"^0.8.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"npm-run-all"</span><span class="s3">: </span><span class="s1">"^4.1.3"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"size-plugin"</span><span class="s3">: </span><span class="s1">"^2.0.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"string-replace-loader"</span><span class="s3">: </span><span class="s1">"^2.2.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"stylelint"</span><span class="s3">: </span><span class="s1">"^12.0.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"stylelint-config-xo"</span><span class="s3">: </span><span class="s1">"^0.16.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"terser-webpack-plugin"</span><span class="s3">: </span><span class="s1">"^2.3.0"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"ts-loader"</span><span class="s3">: </span><span class="s1">"^6.2.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"ts-node"</span><span class="s3">: </span><span class="s1">"^8.5.4"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"type-fest"</span><span class="s3">: </span><span class="s1">"^0.8.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"typescript"</span><span class="s3">: </span><span class="s1">"^3.7.3"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"web-ext"</span><span class="s3">: </span><span class="s1">"^3.2.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"web-ext-submit"</span><span class="s3">: </span><span class="s1">"^3.2.1"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webpack"</span><span class="s3">: </span><span class="s1">"^4.41.2"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"webpack-cli"</span><span class="s3">: </span><span class="s1">"^3.3.10"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"xo"</span><span class="s3">: </span><span class="s1">"^0.25.3"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span></span><span class="s5">"xo"</span><span class="s1">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"envs"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"browser"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"extensions"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s5">"ts"</span><span class="s1">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"tsx"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"globals"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"browser"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"__featuresOptionDefaults__"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"__featuresInfo__"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"__featureName__"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"rules"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"no-alert"</span><span class="s3">: </span><span class="s1">"off"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"prefer-named-capture-group"</span><span class="s3">: </span><span class="s1">"off"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"import/no-unassigned-import"</span><span class="s3">: </span><span class="s1">"off"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"unicorn/prevent-abbreviations"</span><span class="s3">: </span><span class="s1">"error"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"import/extensions"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"error"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"never"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"svg"</span><span class="s3">: </span><span class="s1">"always"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>]</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"overrides"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"files"</span><span class="s3">: </span><span class="s1">"**/*.+(ts|tsx)"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"extends"</span><span class="s3">: </span><span class="s1">"xo-typescript"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s5">"rules"</span><span class="s1">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@typescript-eslint/promise-function-async"</span><span class="s3">: </span><span class="s1">"off"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@typescript-eslint/no-empty-function"</span><span class="s3">: </span><span class="s1">"off"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@typescript-eslint/no-explicit-any"</span><span class="s3">: </span><span class="s1">"error"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"@typescript-eslint/no-unused-vars"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s5">"error"</span><span class="s1">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"varsIgnorePattern"</span><span class="s3">: </span><span class="s1">"^React$"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>]</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>]</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span></span><span class="s1">"ava"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"files"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"test/*.ts"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"babel"</span><span class="s3">: </span><span class="s4">false</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"compileEnhancements"</span><span class="s3">: </span><span class="s4">false</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"extensions"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"ts"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"require"</span><span class="s3">: [</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"esm"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"ts-node/register"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>]</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span></span><span class="s1">"stylelint"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"extends"</span><span class="s3">: </span><span class="s1">"stylelint-config-xo"</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"rules"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"selector-type-no-unknown"</span><span class="s3">: </span><span class="s4">null</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"declaration-no-important"</span><span class="s3">: </span><span class="s4">null</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"property-no-vendor-prefix"</span><span class="s3">: </span><span class="s4">null</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"property-blacklist"</span><span class="s3">: </span><span class="s4">null</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"selector-class-pattern"</span><span class="s3">: </span><span class="s4">null</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"selector-id-pattern"</span><span class="s3">: </span><span class="s4">null</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"rule-empty-line-before"</span><span class="s3">: </span><span class="s4">null</span><span class="s3">,</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"at-rule-empty-line-before"</span><span class="s3">: </span><span class="s4">null</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span></span><span class="s1">"engines"</span><span class="s3">: {</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s1">"node"</span><span class="s3">: </span><span class="s1">"&gt;=10.0.0"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td1">
+        <p class="p4"><span class="s2">}</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
